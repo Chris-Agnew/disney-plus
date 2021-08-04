@@ -5,7 +5,7 @@ const Header = () => {
 	<div>
 	<Nav>
 			<Logo src="/images/logo.svg"/>
-			
+
 		<NavMenu>
 		<a href="#Home">
 			<img src="/images/home-icon.svg" alt="" />
@@ -58,24 +58,46 @@ const Logo = styled.img`
 const NavMenu = styled.div`
 	display: flex;
 	flex: 1;
-	margin-left: 25px;
+	margin-left: 15px;
 	cursor: pointer;
 	align-items: center;
 
 	a {
 		display: flex;
 		align-items: center;
-		padding: 0 12px;
 		text-decoration: none;
 		color: #fff;
+		padding: 0.5rem;
 
 		img {
-			height: 30px;
+			height: 25px;
+			padding-right: 0.5rem;
 		}
 
 		span {
 			font-size: 15px;
 			letter-spacing: 1.42px;
+			position: relative;
+			padding-top: 5px;
+			&:after {
+				content: '';
+				height: 2px;
+				background-color: #fff;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: -6px;
+				opacity: 0;
+				transform: scaleX(0);
+				transform-origin: left center;
+				transition: all 750ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+			}
+			&:hover {
+				&:after {
+					opacity: 1;
+					transform: scaleX(1);
+			}	
+		}
 		}	
 	}
 	`
