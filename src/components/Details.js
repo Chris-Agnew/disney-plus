@@ -64,7 +64,7 @@ const Background = styled.div `
 
 const ImageTitle = styled.div `
 	margin-top: 50px;	
-height: 30vh;
+	height: 30vh;
 	min-height: 175px;
 	min-width: 200px;
 	width: 35vw;
@@ -72,7 +72,6 @@ height: 30vh;
 	img {
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
 	}
 `
 
