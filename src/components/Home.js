@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import ImageSlider from './ImageSlider'
 import Studio from './Studio'
+import Movies from './Movies'
 
 const Home = () => {
 	return (
 		<Container>
 			<ImageSlider />
 			<Studio />
-
+			<Movies />
 			
 		</Container>
 	
