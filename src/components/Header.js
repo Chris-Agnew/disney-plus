@@ -118,6 +118,7 @@ const Nav = styled.nav`
 	align-items: center;
 	padding: 0 2rem;
 	overflow-x: hidden;
+	justify-content: space-between;
 `	
 
 const Logo = styled.img`
@@ -125,12 +126,14 @@ const Logo = styled.img`
 `
 
 const NavMenu = styled.div`
-	display: flex;
+	display: none;
 	flex: 1;
 	margin-left: 15px;
 	cursor: pointer;
 	align-items: center;
-
+	@media (min-width: 1024px) {
+	display: flex;
+}
 	a {
 		display: flex;
 		align-items: center;
