@@ -22,7 +22,7 @@ const Header = () => {
 		history.push('/')
 	}
 		})
-	}, [userName])
+	}, [userName, userPhoto, dispatch, history])
 
 
 
@@ -38,9 +38,9 @@ const Header = () => {
         .signOut()
         .then(() => {
           dispatch(setSignOut());
-          history.push("/");
+           history.push("/login");
         })
-      
+     
   }
 }
 		
