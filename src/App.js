@@ -19,7 +19,7 @@ function App() {
      <Route path="/login">
        <Login />
      </Route>
-      <Route path="/details">
+      <Route path="/details/:id">
           <Details />
         </Route>
         <Route path="/">

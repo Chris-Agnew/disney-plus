@@ -1,13 +1,31 @@
 import styled from "styled-components"
+import { useParams } from "react-router-dom"
+import {useEffect , useState} from "react";
+import db from '../firebase'
 
 const Details = () => {
+const { id } = useParams();
+const [movie, setMovie] = useState();
+useEffect(() => {
+	db.collection("movies").doc(id).get().then((doc) => {
+		if (doc.exists){
+			setMovie(doc.data())
+		} 
+	})
+
+}, [id]);
+
+console.log(movie);
+
 	return (
 		<Container>
+			{movie &&
+			<>
 			<Background>
-				<img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4F39B7E16726ECF419DD7C49E011DD95099AA20A962B0B10AA1881A70661CE45/scale?width=1440&aspectRatio=1.78&format=jpeg" alt="" />
+				<img src={movie.backgroundImg} alt="" />
 			</Background>
 			<ImageTitle>
-				<img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/D7AEE1F05D10FC37C873176AAA26F777FC1B71E7A6563F36C6B1B497CAB1CEC2/scale?width=1440&aspectRatio=1.78" alt="" />
+				<img src={movie.titleImg} alt="" />
 			</ImageTitle>
 			<Controls>
 				<PlayButton>
@@ -26,13 +44,15 @@ const Details = () => {
 				</GroupWatch>
 			</Controls>
 			<Subtitle>
-				<h4>2018 - 7m - Family, Fantasy, Kids, Animation</h4>
+				<h4>{movie.subTitle}</h4>
 			</Subtitle>
 			<Description>
 				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi fugit ipsam, distinctio expedita odit et aspernatur perferendis recusandae! Quasi, voluptatem, voluptas quia expedita commodi totam placeat ex labore culpa alias unde velit nulla autem rerum reiciendis fugit. Nesciunt veritatis cum, adipisci quidem quo doloremque veniam illo, expedita necessitatibus tempora nemo.
+					{movie.description}
 				</p>
 			</Description>
+			</>
+			}
 		</Container>
 	)
 }
