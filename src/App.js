@@ -6,20 +6,20 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+ 
 } from "react-router-dom";
 import Details from './components/Details'
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Router>
       <Header />
       <Switch>
      <Route path="/login">
        <Login />
      </Route>
-        <Route path="/details">
+      <Route path="/details">
           <Details />
         </Route>
         <Route path="/">
