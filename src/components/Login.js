@@ -55,15 +55,21 @@ const Content = styled.div`
 
 const Logos = styled.div`
 	margin: 1rem;	
-		img{
+	img {
+		width: 100%;
+	}
+	
+	@media (min-width: 768px) {	
+	img{
+			
 			width: 700px;
 			height: 300px;
 			}
-	
+		}
 `
 
 const SignUp = styled.a`
-    width: 45%;
+    width: 70%;
     background-color: #0063e5;
     font-weight: bold;
     padding: 17px 0;
@@ -81,20 +87,35 @@ const SignUp = styled.a`
     &:hover {
         background: #0483ee;
     }
+	@media (min-width: 768px) {
+		width: 45%;
+	}
 `
 
 const Info = styled.div`
 	color: rgb(249, 249, 249);
 	margin: 2rem 3rem;
-	width: 50%;
+	width: 80%;
+
+
+	@media (min-width: 768px) {
+		width: 50%;
+	}
 `
 
 const SmallLogos = styled.div`
 	margin: 3rem;
 	padding: 0 1rem;	
-		img {
+	img {
+		width: 100%;
+		height: 100%;
+	}	
+	@media (min-width: 768px) {	
+	img{
+			
 			width: 700px;
-			height: 100%;
+			height: 300px;
+			}
 		}
 `
 
