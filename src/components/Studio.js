@@ -48,7 +48,7 @@ const Container = styled.div`
   grid-gap: 25px;
   gap: 25px;
 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  @media (max-width: 767px) {
+  @media (min-width: 500px) {
   grid-template-columns: repeat(5, minmax(0, 1fr));
     
   }
