@@ -13,7 +13,6 @@ const Home = () => {
 
 	useEffect(() => {
 		db.collection('movies').onSnapshot(snapshot => {
-			console.log(snapshot)
 			let movies = snapshot.docs.map((doc) => {
 				return { id: doc.id, ...doc.data() }
 			

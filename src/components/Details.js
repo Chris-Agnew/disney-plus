@@ -15,7 +15,7 @@ useEffect(() => {
 
 }, [id]);
 
-console.log(movie);
+
 
 	return (
 		<Container>
