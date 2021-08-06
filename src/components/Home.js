@@ -20,7 +20,7 @@ const Home = () => {
 			})
 			dispatch(setMovies(movies))
 		})
-	}, [])
+	}, [dispatch])
 	return (
 		<Container>
 			<ImageSlider />
