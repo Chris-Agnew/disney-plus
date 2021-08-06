@@ -9,11 +9,11 @@ const Login = () => {
 				<Logos>
 					<img src="/images/cta-logo-one.svg" alt="" />
 				</Logos>
-				<CTA>
-					<h1>Get All There</h1>
-				</CTA>
+				<SignUp>
+					Get All There
+				</SignUp>
 				<Info>
-					<p>Get Premier Access to Raya and the Last Dragon for an additional fee with a Disney+ subscription. As if 3.26.21, the price of Disney+ and The Disney Bundle will increase by $1.</p>
+					<p>Get Premier Access to Raya and the Last Dragon for an additional fee with a Disney+ subscription. As of 3.26.21, the price of Disney+ and The Disney Bundle will increase by $1.</p>
 				</Info>
 				<SmallLogos>
 					<img src="/images/cta-logo-two.png" alt="" />
@@ -40,7 +40,6 @@ const Container = styled.div`
 
 const Background = styled.div`
 	overflow: hidden;
-	z-index: -1;
 	background-image: url("/images/login-background.jpg");
 	height: calc(100vh - 70px);
 	width: 100%;
@@ -51,7 +50,6 @@ const Content = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	z-index: 1;
 	height: 100%;
 `
 
@@ -64,27 +62,38 @@ const Logos = styled.div`
 	
 `
 
-const CTA = styled.button`
-	background-color: blue;
-	border-radius: 10px;
-	padding: 10px;
-	width: 90%;
-	height: 4.7rem;
-	color: rgb(249, 249, 249);
+const SignUp = styled.a`
+    width: 45%;
+    background-color: #0063e5;
+    font-weight: bold;
+    padding: 17px 0;
+    color: #f9f9f9;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 250ms;
+    letter-spacing: 1.5px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+	z-index: 3;
 	text-transform: uppercase;
-	`
+    &:hover {
+        background: #0483ee;
+    }
+`
 
 const Info = styled.div`
 	color: rgb(249, 249, 249);
 	margin: 2rem 3rem;
-	width: 90%;
+	width: 50%;
 `
 
 const SmallLogos = styled.div`
 	margin: 3rem;
 	padding: 0 1rem;	
 		img {
-			width: 100%;
+			width: 700px;
 			height: 100%;
 		}
 `
