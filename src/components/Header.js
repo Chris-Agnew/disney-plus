@@ -4,6 +4,7 @@ import { auth, provider } from '../firebase'
 import { selectUserName, selectUserPhoto,setUserLogin, setSignOut} from '../features/user/userSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 	const dispatch = useDispatch();
@@ -57,7 +58,11 @@ const Header = () => {
 
 	return (
 	<Nav>
+		<Link to="/">
 			<Logo src="/images/logo.svg"/>
+
+		</Link>
+		
 		{!userName ?(
 		<LoginContainer>
 		<Login onClick={handleAuth}>Login</Login>
@@ -74,19 +79,19 @@ const Header = () => {
 			<img src="/images/search-icon.svg" alt="" />
 			<span>SEARCH</span>
 		</a>
-		<a href="#Home">
+		<a href="#Watchlist">
 			<img src="/images/watchlist-icon.svg" alt="" />
 			<span>WATCH LIST</span>
 		</a>
-		<a href="#Home">
+		<a href="#Originals">
 			<img src="/images/original-icon.svg" alt="" />
 			<span>ORIGINALS</span>
 		</a>
-		<a href="#Home">
+		<a href="#Movies">
 			<img src="/images/movie-icon.svg" alt="" />
 			<span>MOVIES</span>
 		</a>
-		<a href="#Home">
+		<a href="#Series">
 			<img src="/images/series-icon.svg" alt="" />
 			<span>SERIES</span>
 		</a>
