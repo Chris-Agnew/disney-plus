@@ -47,8 +47,11 @@ const Container = styled.div`
   display: grid;
   grid-gap: 25px;
   gap: 25px;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  @media (max-width: 767px) {
   grid-template-columns: repeat(5, minmax(0, 1fr));
-
+    
+  }
 `;
 
 const Wrap = styled.div`
